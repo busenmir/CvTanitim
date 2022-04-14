@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.busedemir.cvtanitim.ui.home.HomeFragment"
+        android:label="@string/menu_genel"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.busedemir.cvtanitim.ui.gallery.GalleryFragment"
+        android:label="@string/menu_egitim"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.busedemir.cvtanitim.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_deneyim"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_proje"
+        android:name="com.busedemir.cvtanitim.ui.projeler.projeFragment"
+        android:label="@string/menu_proje"
+        tools:layout="@layout/fragment_proje" />
+
+    <fragment
+        android:id="@+id/nav_kisisel"
+        android:name="com.busedemir.cvtanitim.ui.kisisel.kisiselFragment"
+        android:label="@string/menu_kisisel"
+        tools:layout="@layout/fragment_kisisel" />
+</navigation>

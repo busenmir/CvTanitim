@@ -1,0 +1,12 @@
+package com.busedemir.cvtanitim.ui.projeler
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+
+class projeViewModel : ViewModel() {
+    private val _text = MutableLiveData<String>().apply {
+        value = "This is gallery Fragment"
+    }
+    val text: LiveData<String> = _text
+}

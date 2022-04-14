@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_person_pin_24"
+            android:title="@string/menu_genel" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_egitim" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_baseline_work_24"
+            android:title="@string/menu_deneyim" />
+        <item
+            android:id="@+id/nav_proje"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_proje" />
+        <item
+            android:id="@+id/nav_kisisel"
+            android:icon="@drawable/ic_baseline_attach_file_24"
+            android:title="@string/menu_kisisel" />
+    </group>
+
+</menu>
