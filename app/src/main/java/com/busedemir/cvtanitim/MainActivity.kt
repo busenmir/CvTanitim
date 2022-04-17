@@ -1,5 +1,6 @@
 package com.busedemir.cvtanitim
 
+import android.content.Context
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.snackbar.Snackbar
@@ -17,7 +18,6 @@ import com.busedemir.cvtanitim.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.fragment_gallery.*
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 

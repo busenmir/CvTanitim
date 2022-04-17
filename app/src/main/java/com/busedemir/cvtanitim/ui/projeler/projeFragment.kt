@@ -31,16 +31,26 @@ class projeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentProjeBinding.inflate(inflater, container, false)
-        val root = inflater.inflate(R.layout.fragment_proje,container,false)
+        val root = binding.root
         val recyclerView : RecyclerView = binding.recyclerView
         recyclerView.setHasFixedSize(true)
-        gridLayoutManager= GridLayoutManager(requireContext(),3,GridLayoutManager.VERTICAL,false)
+        gridLayoutManager= GridLayoutManager(requireContext(),2,GridLayoutManager.VERTICAL,false)
         recyclerView.layoutManager=gridLayoutManager
-        val eleman1 = Model3(1,"buse",R.drawable.akbank)
-        val eleman2 = Model3(2,"buse",R.drawable.akbank)
+        val eleman1 = Model3(1,"Sosyal Fayda İçin\n"+ "Veri Bilimi",R.drawable.mobil,"https://cads.tedu.edu.tr/projeler-hareketlilik-ve-mobilite/")
+        val eleman2 = Model3(2,"SüperKahramanlar",R.drawable.siper,"https://github.com/busenmir/SuperKahramanKitabi.git")
+        val eleman3 = Model3(3,"Veteriner \n Uygulaması",R.drawable.vet1,"https://github.com/busenmir/VeterinerUygulamasi")
+        val eleman4 = Model3(4,"Yemek Tarifleri",R.drawable.yemektarifi,"https://github.com/busenmir/YemekTarifleri")
+        val eleman5= Model3(5,"Zar Atmaca",R.drawable.zar,"https://github.com/busenmir/ZarAtma")
+        val eleman6= Model3(6,"Sayi Tahmin Oyunu ",R.drawable.sayi,"https://github.com/busenmir/SayiTahminEt")
+        val eleman7= Model3(7,"Daha Fazlası İçin \n Beklemede Kalın ! ",R.drawable.github,"https://github.com/busenmir?tab=repositories")
         liste = ArrayList<Model3>()
         liste.add(eleman1)
         liste.add(eleman2)
+        liste.add(eleman3)
+        liste.add(eleman4)
+        liste.add(eleman5)
+        liste.add(eleman6)
+        liste.add(eleman7)
         adapter = ProjeAdapter(requireContext(),liste)
         recyclerView.adapter=adapter
         return root
