@@ -1,5 +1,6 @@
 package com.busedemir.cvtanitim.ui.home
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,43 +18,21 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val imageView : ImageView = binding.imageView2
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            imageView.setImageResource(R.drawable.buse)
-        }
-        val textView: TextView = binding.isim
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text="Buse Demir"
-        }
-        val dogum: TextView = binding.dogum
-        homeViewModel.text.observe(viewLifecycleOwner) {
+        binding.apply {
+            imageView2.setImageResource(R.drawable.buse)
+            isim.text="Buse Demir"
             dogum.text="23.05.1998 / ANKARA "
-        }
-        val meslek: TextView = binding.meslek
-        homeViewModel.text.observe(viewLifecycleOwner) {
             meslek.text="Kırıkkale Üniversitesi"
-        }
-        val medeni: TextView = binding.medeni
-        homeViewModel.text.observe(viewLifecycleOwner) {
             medeni.text="Bilgisayar Mühendisi"
-        }
-        val ehliyet: TextView = binding.ehliyet
-        homeViewModel.text.observe(viewLifecycleOwner) {
             ehliyet.text="https://medium.com/@buse93dmr"
-        }
-        val github: TextView = binding.github
-        homeViewModel.text.observe(viewLifecycleOwner) {
             github.text="https://github.com/busenmir"
         }
         return root

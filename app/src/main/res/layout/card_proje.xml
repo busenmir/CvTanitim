@@ -20,15 +20,17 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="500dp"
-           android:padding="10dp">
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/image_view"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="6dp"
+                android:layout_marginStart="1dp"
                 android:scaleType="fitXY"
+                app:layout_constraintBottom_toTopOf="@+id/title_text_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints"
                 tools:srcCompat="@tools:sample/avatars" />
 
@@ -38,14 +40,13 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/image_view"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/amaranth"
                 android:gravity="center"
-                android:textSize="20dp"
                 android:textColor="@color/black"
+                android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintBottom_toTopOf="@+id/button2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/image_view"
                 tools:ignore="MissingConstraints" />
@@ -54,11 +55,11 @@
                 android:id="@+id/button2"
                 android:layout_width="113dp"
                 android:layout_height="49dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginStart="150dp"
                 android:gravity="center"
                 android:text="PROJELİNK"
                 android:textSize="11dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title_text_view"
                 tools:ignore="MissingConstraints" />

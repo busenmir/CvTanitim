@@ -1,7 +1,7 @@
-package com.busedemir.cvtanitim
+package com.busedemir.cvtanitim.ui.slideshow
 
+import android.annotation.SuppressLint
 import android.content.Context
-import android.text.method.ScrollingMovementMethod
 import android.transition.AutoTransition
 import android.transition.TransitionManager
 import android.view.LayoutInflater
@@ -12,8 +12,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.busedemir.cvtanitim.R
 
-class SlidesAdapter(private val context :Context , private val list :List<Model2>) : RecyclerView.Adapter<SlidesAdapter.VHolder>() {
+class SlidesAdapter(private val context :Context , private val list :List<SlidesModel>) : RecyclerView.Adapter<SlidesAdapter.VHolder>() {
     inner class VHolder(view: View): RecyclerView.ViewHolder(view){
         var cardView : CardView
         var imageView : ImageView
@@ -33,10 +34,11 @@ class SlidesAdapter(private val context :Context , private val list :List<Model2
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VHolder {
-        val item = LayoutInflater.from(context).inflate(R.layout.card_tasarim2,parent,false)
+        val item = LayoutInflater.from(context).inflate(R.layout.card_deneyim,parent,false)
         return VHolder(item)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: VHolder, position: Int) {
         val index = list[position]
         holder.imageView.setImageResource(index.resim)

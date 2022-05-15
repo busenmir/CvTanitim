@@ -1,4 +1,4 @@
-package com.busedemir.cvtanitim
+package com.busedemir.cvtanitim.ui.projeler
 
 import android.content.Context
 import android.content.Intent
@@ -11,8 +11,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.busedemir.cvtanitim.R
 
-class ProjeAdapter(private val context: Context, private val liste : List<Model3>) : RecyclerView.Adapter<ProjeAdapter.ViewHolder>() {
+class ProjeAdapter(private val context: Context, private val liste : List<ProjeModel>) : RecyclerView.Adapter<ProjeAdapter.ViewHolder>() {
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var cardView: CardView
         var imageView: ImageView
@@ -27,12 +28,12 @@ class ProjeAdapter(private val context: Context, private val liste : List<Model3
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProjeAdapter.ViewHolder {
-        val item = LayoutInflater.from(context).inflate(R.layout.card_tasarim3,parent,false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val item = LayoutInflater.from(context).inflate(R.layout.card_proje,parent,false)
         return ViewHolder(item)
     }
 
-    override fun onBindViewHolder(holder:ProjeAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val index = liste[position]
         holder.textView.text = index.ProjeAdı
         holder.imageView.setImageResource(index.resim)

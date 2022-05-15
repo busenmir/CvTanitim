@@ -1,20 +1,17 @@
-package com.busedemir.cvtanitim
+package com.busedemir.cvtanitim.ui.kisisel
 
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-class KisiselAdapter(private val context: Context, private val liste : List<Model4>) : RecyclerView.Adapter<KisiselAdapter.ViewHolder>() {
+import com.busedemir.cvtanitim.R
+
+class KisiselAdapter(private val context: Context, private val liste : List<KisiselModel>) : RecyclerView.Adapter<KisiselAdapter.ViewHolder>() {
     lateinit var front_anim:AnimatorSet
     lateinit var back_anim: AnimatorSet
     var isFront =true
@@ -36,12 +33,12 @@ class KisiselAdapter(private val context: Context, private val liste : List<Mode
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KisiselAdapter.ViewHolder {
-        val item = LayoutInflater.from(context).inflate(R.layout.card_tasarim4,parent,false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val item = LayoutInflater.from(context).inflate(R.layout.card_kisisel,parent,false)
         return ViewHolder(item)
     }
 
-    override fun onBindViewHolder(holder:KisiselAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val index = liste[position]
         holder.textView.text = index.soru
         holder.textView1.text = index.cevap

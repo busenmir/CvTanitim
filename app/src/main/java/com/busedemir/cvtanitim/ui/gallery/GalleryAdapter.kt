@@ -1,4 +1,4 @@
-package com.busedemir.cvtanitim
+package com.busedemir.cvtanitim.ui.gallery
 
 import android.content.Context
 import android.content.Intent
@@ -9,15 +9,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import java.net.URL
-import java.util.logging.Level.parse
-import kotlin.time.Duration.Companion.parse
+import com.busedemir.cvtanitim.R
 
-class GalleryAdapter (private val context: Context, private val liste : List<Model>) : RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
+class GalleryAdapter (private val context: Context, private val liste : List<GalleryModel>) : RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var cardView: CardView
         var imageView: ImageView
@@ -32,12 +28,12 @@ class GalleryAdapter (private val context: Context, private val liste : List<Mod
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GalleryAdapter.ViewHolder {
-        val item = LayoutInflater.from(context).inflate(R.layout.card_tasarim,parent,false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val item = LayoutInflater.from(context).inflate(R.layout.card_sertifika,parent,false)
         return ViewHolder(item)
     }
 
-    override fun onBindViewHolder(holder: GalleryAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val index = liste[position]
         holder.textView.text = index.resimYazi
         holder.imageView.setImageResource(index.resim)
