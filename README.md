@@ -1,6 +1,7 @@
 # Buse Demir Cv Uygulaması 
 
-Navigation Drawer yapısı kullanarak Recycler view ile listeleme işlemlerini gerçekleştirerek buna bağlı olan card tasarımlarımızı işleme koyarak genel uygulamamızı gerçekleştirdik.
+###Kullanılan Teknolojiler
+* View Binding,RecyclerView,DrawerNavigation,Menu,UI, .... 
 
 
 
