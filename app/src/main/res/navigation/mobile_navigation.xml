@@ -25,13 +25,13 @@
 
     <fragment
         android:id="@+id/nav_proje"
-        android:name="com.busedemir.cvtanitim.ui.projeler.projeFragment"
+        android:name="com.busedemir.cvtanitim.ui.projeler.ProjeFragment"
         android:label="@string/menu_proje"
         tools:layout="@layout/fragment_proje" />
 
     <fragment
         android:id="@+id/nav_kisisel"
-        android:name="com.busedemir.cvtanitim.ui.kisisel.kisiselFragment"
+        android:name="com.busedemir.cvtanitim.ui.kisisel.KisiselFragment"
         android:label="@string/menu_kisisel"
         tools:layout="@layout/fragment_kisisel" />
 </navigation>

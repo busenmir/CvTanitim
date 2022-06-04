@@ -10,8 +10,8 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardBackgroundColor="#41F8C4D6"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#41F8C4D6">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="231dp"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -50,7 +50,7 @@
                 android:layout_marginBottom="24dp"
                 android:scrollbars="vertical"
                 android:textColor="@color/black"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -68,7 +68,7 @@
                 android:gravity="center"
                 android:padding="10dp"
                 android:textColor="@color/black"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/textView4"
                 app:layout_constraintEnd_toStartOf="@+id/button1"
