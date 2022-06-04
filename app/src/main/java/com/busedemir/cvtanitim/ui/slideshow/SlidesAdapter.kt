@@ -14,14 +14,16 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.busedemir.cvtanitim.R
 
-class SlidesAdapter(private val context :Context , private val list :List<SlidesModel>) : RecyclerView.Adapter<SlidesAdapter.VHolder>() {
-    inner class VHolder(view: View): RecyclerView.ViewHolder(view){
-        var cardView : CardView
-        var imageView : ImageView
-        var textView : TextView
-        var button :Button
-        var textView2 : TextView
+class SlidesAdapter(private val context: Context, private val list: List<SlidesModel>) :
+    RecyclerView.Adapter<SlidesAdapter.VHolder>() {
+    inner class VHolder(view: View) : RecyclerView.ViewHolder(view) {
+        var cardView: CardView
+        var imageView: ImageView
+        var textView: TextView
+        var button: Button
+        var textView2: TextView
         var textView3: TextView
+
         init {
             cardView = view.findViewById(R.id.cardView)
             imageView = view.findViewById(R.id.imageView3)
@@ -34,7 +36,7 @@ class SlidesAdapter(private val context :Context , private val list :List<Slides
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VHolder {
-        val item = LayoutInflater.from(context).inflate(R.layout.card_deneyim,parent,false)
+        val item = LayoutInflater.from(context).inflate(R.layout.card_deneyim, parent, false)
         return VHolder(item)
     }
 
@@ -42,18 +44,18 @@ class SlidesAdapter(private val context :Context , private val list :List<Slides
     override fun onBindViewHolder(holder: VHolder, position: Int) {
         val index = list[position]
         holder.imageView.setImageResource(index.resim)
-        holder.textView.text=index.yazi
-        holder.textView2.text=index.baslik
-        holder.textView3.text=index.tekno
+        holder.textView.text = index.yazi
+        holder.textView2.text = index.baslik
+        holder.textView3.text = index.tekno
         holder.button.setOnClickListener {
-            if (holder.textView.visibility==View.INVISIBLE){
-                TransitionManager.beginDelayedTransition(holder.cardView,AutoTransition())
-                holder.textView.visibility=View.VISIBLE
-                holder.button.text="daha az"
-            }else {
-                TransitionManager.beginDelayedTransition(holder.cardView,AutoTransition())
-                holder.textView.visibility=View.INVISIBLE
-                holder.button.text="daha için"
+            if (holder.textView.visibility == View.INVISIBLE) {
+                TransitionManager.beginDelayedTransition(holder.cardView, AutoTransition())
+                holder.textView.visibility = View.VISIBLE
+                holder.button.text = "daha az"
+            } else {
+                TransitionManager.beginDelayedTransition(holder.cardView, AutoTransition())
+                holder.textView.visibility = View.INVISIBLE
+                holder.button.text = "daha için"
             }
         }
     }

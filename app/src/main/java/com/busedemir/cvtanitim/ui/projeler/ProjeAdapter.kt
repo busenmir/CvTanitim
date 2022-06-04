@@ -13,12 +13,14 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.busedemir.cvtanitim.R
 
-class ProjeAdapter(private val context: Context, private val liste : List<ProjeModel>) : RecyclerView.Adapter<ProjeAdapter.ViewHolder>() {
+class ProjeAdapter(private val context: Context, private val liste: List<ProjeModel>) :
+    RecyclerView.Adapter<ProjeAdapter.ViewHolder>() {
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var cardView: CardView
         var imageView: ImageView
-        var textView : TextView
-        var button : Button
+        var textView: TextView
+        var button: Button
+
         init {
             cardView = view.findViewById(R.id.cardView)
             imageView = view.findViewById(R.id.image_view)
@@ -29,17 +31,17 @@ class ProjeAdapter(private val context: Context, private val liste : List<ProjeM
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val item = LayoutInflater.from(context).inflate(R.layout.card_proje,parent,false)
+        val item = LayoutInflater.from(context).inflate(R.layout.card_proje, parent, false)
         return ViewHolder(item)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val index = liste[position]
-        holder.textView.text = index.ProjeAdı
+        holder.textView.text = index.projeAdı
         holder.imageView.setImageResource(index.resim)
-        holder.button.setOnClickListener{
+        holder.button.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data= Uri.parse(index.url)
+            intent.data = Uri.parse(index.url)
             it.context.startActivity(intent)
         }
     }

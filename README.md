@@ -1,6 +1,6 @@
 # Buse Demir Cv Uygulaması 
 
-###Kullanılan Teknolojiler
+### Kullanılan Teknolojiler
 * View Binding,RecyclerView,DrawerNavigation,Menu,UI, .... 
 
 
