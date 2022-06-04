@@ -11,9 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="#41F8C4D6"
         app:cardCornerRadius="8dp"
         app:cardElevation="2dp"
-        app:cardBackgroundColor="#41F8C4D6"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true">
 
@@ -44,7 +44,7 @@
                 android:fontFamily="@font/amaranth"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/button2"
                 app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
                 android:layout_marginStart="150dp"
                 android:gravity="center"
                 android:text="PROJELİNK"
-                android:textSize="11dp"
+                android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title_text_view"
