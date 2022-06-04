@@ -30,6 +30,17 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/CvTanitim/app/src/main/res/menu/main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/CvTanitim/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/CvTanitim/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1575" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/card_deneyim.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/card_kisisel.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/card_proje.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/card_sertifika.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/fragment_kisisel.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.22056159420289856" />
       </map>
     </option>
   </component>
